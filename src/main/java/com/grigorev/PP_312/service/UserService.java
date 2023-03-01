@@ -2,9 +2,7 @@ package com.grigorev.PP_312.service;
 
 import com.grigorev.PP_312.model.User;
 import com.grigorev.PP_312.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -28,11 +26,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public User findUserById(Long id) {
-        return userRepository.getOne(id);
-    }
+    public User findUserById(Long id) { return userRepository.findUserById(id); }
 
-    public List<User> findAllUsers() {
-        return userRepository.findAll();
-    }
+    public List<User> findAllUsers() { return userRepository.findAll(); }
 }

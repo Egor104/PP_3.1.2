@@ -39,13 +39,13 @@ public class UserController {
         return "userUpdate";
     }
 
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
+    @PostMapping("/edit/{id}")
     public String updateUser(@ModelAttribute("user") User user) {
         userService.updateUser(user);
         return "redirect:/";
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.POST)
+    @PostMapping("/{id}")
     public String deleteUserById(@PathVariable("id") Long id) {
         userService.deleteUserById(id);
         return "redirect:/";
