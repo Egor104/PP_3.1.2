@@ -1,4 +1,4 @@
-package com.grigorev.PP_312;
+package com.grigorev.PP_312.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
